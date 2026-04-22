@@ -4,7 +4,7 @@ import { toast } from "sonner";
 
 export default function Home() {
   return (
-    <div className='flex justify-center items-center font-sans text-black'>
+    <div className='flex justify-center items-center text-black'>
       <div className="flex flex-col gap-y-[1vh]">
         <div className = 'text-3xl font-bold'>
           sophie nguyen

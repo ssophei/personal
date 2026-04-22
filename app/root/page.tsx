@@ -1,15 +1,13 @@
 "use client";
+import Link from "next/link";
+import FileList from "../../components/FileList";
+import { rootFiles } from "../data/root-files";
 
 export default function Home() {
   return (
-    <div className='flex min-h-screen justify-center items-center px-[20vw] font-sans text-black'>
-      <div className="flex flex-col gap-y-[1vh]">
-        <div className='text-2xl font-bold'>
-          Contact Me
-        </div>
-        <div>
-          Feel free to reach out!
-        </div>
+    <div className='flex w-full font-sans text-black'>
+      <div className="flex flex-col w-full">
+        <FileList files={rootFiles} />
       </div>
     </div>
   );

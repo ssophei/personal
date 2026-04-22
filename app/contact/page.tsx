@@ -1,13 +1,21 @@
+"use client";
+
+import FileList from "../../components/FileList";
+import { contactFiles } from "../data/contact-files";
+
 export default function Contact() {
   return (
-    <div className='flex min-h-screen justify-center items-center px-[20vw] font-sans text-black'>
-      <div className="flex flex-col gap-y-[1vh]">
-        <div className='text-2xl font-bold'>
-          Contact Me
-        </div>
+    <div className='flex w-full font-sans text-black min-h-screen px-[20vw]'>
+      <div className="flex flex-col gap-y-[2vh] w-full py-[5vh]">
         <div>
-          Feel free to reach out!
+          <div className='text-2xl font-bold'>
+            Contact Me
+          </div>
+          <div>
+            Feel free to reach out!
+          </div>
         </div>
+        <FileList files={contactFiles} />
       </div>
     </div>
   );

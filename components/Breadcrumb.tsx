@@ -27,12 +27,12 @@ export default function Breadcrumb() {
 
         return (
           <span key={index} className="flex items-center">
-            {index > 0 && <span className="mx-1">&lt;</span>}
+            {index > 0 && <span className="mx-1 mr-2">&lt;</span>}
 
             {index === breadcrumbs.length - 1 ? (
               <span className="font-bold">{segment}</span>
             ) : (
-              <Link href={href} className="hover:underline">
+              <Link href={href} className="hover:text-taupe-600 transition">
                 {segment}
               </Link>
             )}

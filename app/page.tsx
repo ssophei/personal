@@ -1,12 +1,12 @@
 "use client";
-import {ArrowUpRight, Copy} from "lucide-react";
+import {ArrowUpRight, Copy, Check} from "lucide-react";
 import { toast } from "sonner";
 
 export default function Home() {
   return (
-    <div className='flex min-h-screen justify-center items-center px-[20vw] font-sans text-black'>
+    <div className='flex justify-center items-center font-sans text-black'>
       <div className="flex flex-col gap-y-[1vh]">
-        <div className = 'text-2xl font-bold'>
+        <div className = 'text-3xl font-bold'>
           sophie nguyen
         </div>
         <div>
@@ -35,7 +35,12 @@ export default function Home() {
           <button
           onClick={() => {
             navigator.clipboard.writeText("sophie.nguyen@berkeley.edu");
-            toast("email copied!", { position: "bottom-center" });
+            toast.custom(() => (
+              <div className="rounded-sm bg-taupe-900 text-neutral-50 px-3 py-3 shadow flex flex-row gap-x-[0.5em] justify-center items-center">
+                <Check size={20} />
+                copied to clipboard!
+              </div>
+            ));
           }}
           className="flex items-center gap-x-2 hover:text-taupe-600 transition">
             email
